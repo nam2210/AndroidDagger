@@ -27,6 +27,7 @@ public class AppModule {
     ApiService provideApiService() {
         return new ApiService();
     }
+
     @Provides
     @Singleton
     DBService provideDBService(Context context) {

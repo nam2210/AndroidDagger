@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainScreenActivity"
+        <activity
+            android:name=".main.MainScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,10 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main_screen" />
-        <activity android:name=".detail.DetailScreenActivity"></activity>
+        <activity android:name=".detail.DetailScreenActivity" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:label="@string/title_activity_chat" />
     </application>
 
 </manifest>
