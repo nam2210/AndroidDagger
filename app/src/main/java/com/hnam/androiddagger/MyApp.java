@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 
 
+import com.hnam.androiddagger.di.DaggerAppComponent;
+import com.hnam.androiddagger.di.UserComponent.UserManager;
 
 import javax.inject.Inject;
 
@@ -19,18 +21,24 @@ public class MyApp extends Application implements HasActivityInjector {
     @Inject
     DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;
 
+    @Inject
+    UserManager userManager;
+
     @Override
     public void onCreate() {
         super.onCreate();
-//        DaggerAppComponent
-//                .builder()
-//                .application(this)
-//                .build().inject(this);
+        DaggerAppComponent
+                .builder()
+                .application(this)
+                .build().inject(this);
+    }
 
+    public UserManager getUserManager(){
+        return userManager;
     }
 
     @Override
     public AndroidInjector<Activity> activityInjector() {
-        return activityDispatchingAndroidInjector;
+        return userManager.activityInjector();
     }
 }

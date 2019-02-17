@@ -1,5 +1,6 @@
 package com.hnam.androiddagger.chat;
 
+import com.hnam.androiddagger.di.ChatComponent.ChatScope;
 import com.hnam.androiddagger.main.MainContract;
 import com.hnam.androiddagger.main.MainPresenterImpl;
 import com.hnam.androiddagger.main.MainScreenActivity;
@@ -14,6 +15,7 @@ import dagger.Provides;
 public class ChatScreenModule {
 
     @Provides
+    @ChatScope
     public ChatContract.Presenter providePresenter(ChatPresenterImpl presenter){
         return presenter;
     }

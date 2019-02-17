@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.hnam.androiddagger.database.ApiService;
 import com.hnam.androiddagger.database.DBService;
+import com.hnam.androiddagger.di.UserComponent.UserComponent;
 
 import javax.inject.Singleton;
 
@@ -14,7 +15,7 @@ import dagger.Provides;
 /**
  * Created by nampham on 12/23/18.
  */
-@Module
+@Module(subcomponents = UserComponent.class)
 public class AppModule {
     @Provides
     @Singleton

@@ -1,7 +1,7 @@
 package com.hnam.androiddagger.di;
 
 
-import com.hnam.androiddagger.MainActivity;
+import com.hnam.androiddagger.di.UserComponent.UserComponent;
 import com.hnam.androiddagger.main.MainScreenModule;
 import com.hnam.androiddagger.main.MainScreenActivity;
 

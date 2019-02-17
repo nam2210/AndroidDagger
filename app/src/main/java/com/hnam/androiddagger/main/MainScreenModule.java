@@ -1,5 +1,7 @@
 package com.hnam.androiddagger.main;
 
+import com.hnam.androiddagger.di.UserComponent.UserScope;
+
 import dagger.Module;
 import dagger.Provides;
 

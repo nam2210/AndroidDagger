@@ -17,9 +17,7 @@ import dagger.android.AndroidInjectionModule;
  * Created by nampham on 12/23/18.
  */
 @ChatScope
-@Component(
-        modules = {ChatModule.class, ChatActivityBuilder.class}
-        )
+@Component(modules = {ChatModule.class})
 public interface ChatComponent {
     @Component.Builder
     interface Builder {
@@ -29,5 +27,5 @@ public interface ChatComponent {
         ChatComponent build();
     }
 
-    void inject(MyApp app);
+
 }
