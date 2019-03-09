@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 
+import com.hnam.androiddagger.di.DaggerAppComponent;
 
 import javax.inject.Inject;
 
@@ -22,10 +23,10 @@ public class MyApp extends Application implements HasActivityInjector {
     @Override
     public void onCreate() {
         super.onCreate();
-//        DaggerAppComponent
-//                .builder()
-//                .application(this)
-//                .build().inject(this);
+        DaggerAppComponent
+                .builder()
+                .application(this)
+                .build().inject(this);
 
     }
 

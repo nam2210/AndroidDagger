@@ -33,4 +33,11 @@ dependencies {
     compile "com.google.dagger:dagger-android-support:2.20"
     annotationProcessor "com.google.dagger:dagger-android-processor:2.20"
 
+    //Architecture Components
+    compile 'android.arch.lifecycle:extensions:1.1.1'
+    compile 'android.arch.persistence.room:runtime:1.1.1'
+
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+
 }

@@ -1,5 +1,7 @@
 package com.hnam.androiddagger.main;
 
+import android.arch.lifecycle.ViewModelProvider;
+import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,15 +23,17 @@ public class MainScreenActivity extends AppCompatActivity implements MainContrac
     MainContract.Presenter presenter;
 
     @Inject
-    MainContract.View mView;
+    CustomViewModelFactory factory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AndroidInjection.inject(this);
 
+        MyViewModel model = ViewModelProviders.of(this, factory).get(MyViewModel.class);
+        Log.e(TAG,"factory==" + factory.toString());
+        Log.e(TAG,"model==" + model.toString());
         presenter.mainTest();
-        Log.e(TAG,"mView=" + mView.toString());
 
         setContentView(R.layout.activity_main_screen);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

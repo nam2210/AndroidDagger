@@ -9,10 +9,13 @@ import javax.inject.Inject;
  */
 public class MainPresenterImpl implements MainContract.Presenter {
     private static final String TAG = MainPresenterImpl.class.getSimpleName();
+    private MainContract.View mView;
+
 
     @Inject
-    public MainPresenterImpl(){
-
+    public MainPresenterImpl(MainContract.View view){
+        mView = view;
+        Log.e(TAG, "view="+mView.toString());
     }
 
     @Override

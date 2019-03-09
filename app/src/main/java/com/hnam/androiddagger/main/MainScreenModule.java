@@ -18,4 +18,9 @@ public class MainScreenModule {
     public MainContract.View provideView(MainScreenActivity activity){
         return activity;
     }
+
+    @Provides
+    public CustomViewModelFactory provideFactory(){
+        return new CustomViewModelFactory(100);
+    }
 }

@@ -2,6 +2,7 @@ package com.hnam.androiddagger.di.ChatComponent;
 
 
 import com.hnam.androiddagger.chat.ChatActivity;
+import com.hnam.androiddagger.chat.ChatScreenModule;
 import com.hnam.androiddagger.main.MainScreenActivity;
 import com.hnam.androiddagger.main.MainScreenModule;
 
@@ -14,7 +15,7 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class ChatActivityBuilder {
 
-    @ContributesAndroidInjector(modules = ChatActivityBuilder.class)
+    @ContributesAndroidInjector(modules = ChatScreenModule.class)
     abstract ChatActivity bindChatActivity();
 
 }
